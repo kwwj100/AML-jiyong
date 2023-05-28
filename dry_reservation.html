@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>DANKIK</title>
+        <link rel="stylesheet" href="reservation.css" />
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css"> -->
+    </head>
+
+    <body>
+        <h3> 세탁실 예약 시스템 </h3>
+        <form method="get" action = "form_app.js">
+            <fieldset>
+                <legend> 예약자 정보 </legend>
+                <br>
+                <label for ="sub"> 예약자명:</label>
+                <input type = "text" name = "person" id = "sub"/><br>
+                <br>
+                <label for = "phone"> 휴대폰번호 : </label>
+                <input type = "tel" name = "tell" id = "phone" placeholder="010-0000-0000"
+                        pattern = "(01[0-9]{1})-[0-9]{3,4}-[0-9]{4}"/><br>
+                <br>
+                <!-- 예약인원:
+                <select name = "persons" size = "1">
+                    <option value = "2"> 2명 </option>
+                    <option value = "3"> 3명 </option>
+                    <option value = "4"> 4명 </option>
+                    <option value = "5"> 5명 </option>
+                    <option value = "6"> 6명 </option>
+                    <option value = "7"> 7명 </option>
+                    <option value = "8"> 8명 </option>
+                </select> -->
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend> 일자 선택 및 시간 선택 </legend>
+                <input type="date" name="reservation_date"/>
+                <input type="time" name="reservation_time" min="00:00" max="23:59"/>
+                <br>
+                <br>
+
+                <label for = "position">  </label>
+                <input type="radio" name="site" id="position" value="1"/> 집현재
+                <input type="radio" name="site" id="position" value="2"/> 웅비홀
+                <input type="radio" name="site" id="position" value="3"/>진리관
+                <br>
+                <br>
+
+                <label for="choice"> 건조기 선택: </label>
+                <input type="radio" name="op" id="choice" value="dry1"/>건조기 1
+                <input type="radio" name="op" id="choice" value="dry2"/>건조기 2
+                <input type="radio" name="op" id="choice" value="dry3"/>건조기 3
+
+            </fieldset>
+            <br>
+            <br>
+            <input type="submit" value="예약"/>
+            <input type="reset" value="취소"/>
+            
+        </form>
+    </body>
+</html>
